@@ -48,3 +48,26 @@
   </table>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Sonuncu Yeniləmə</title>
+  <style>
+    body { font-family: sans-serif; background: #f0f0f0; padding: 20px; text-align: center; }
+    #last-updated { font-size: 1.2em; color: #555; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div id="last-updated"></div>
+  <script>
+    function getFormattedDate() {
+      const date = new Date();
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return date.toLocaleDateString('az-AZ', options);
+    }
+
+    document.getElementById('last-updated').textContent = 'Sonuncu yeniləmə: ' + getFormattedDate();
+  </script>
+</body>
+</html>
